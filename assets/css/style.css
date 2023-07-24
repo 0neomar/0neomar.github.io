@@ -1,0 +1,26 @@
+:root {
+    --color-orange: #DF740C;
+    --color-yellow: #FFE64D;
+    --color-lightblue: #E6FFFF;
+    --color-blue: #6FC3DF;
+    --color-darkblue: #0C141F;
+    --gradient-main: linear-gradient(150deg, rgba(12,20,31,1) 0%, rgba(12,20,31,1) 50%, rgba(115,67,22,1) 100%);
+    --primary: #f4511e !important;
+}
+
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+    --code-color: var(--color-darkblue);
+}
+
+.hero {
+    padding: 100px 0;
+    /* background-color: var(--color-darkblue); */
+    /* background: rgb(12,20,31); */
+    background: var(--gradient-main);
+}
+
+
+.color-orange { color: var(--color-orange); }
+.color-yellow { color: var(--color-yellow); }
+.color-blue { color: var(--color-blue); }

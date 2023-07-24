@@ -1,11 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="dark">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Neomar Rodriguez</title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/pico.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
+
 <body>
-	<h4>Test</h4>
+	<div class="hero">
+		<header class="container">
+			<hgroup>
+				<h1 class="color-blue">Neomar Gabriel Rodriguez</h1>
+				<h3>Backend developer with more than 4 years of experience.</h3>
+				<h3>I like to code. Also I know JavaScript, PHP, SQL, Python, and some others languages.</h3>
+			</hgroup>
+			<p data-theme="light">
+				<a href="#" role="button_" onclick="event.preventDefault()">
+					<code id="btn-action">1| <span class="color-orange">goto</span> projects;</code>
+				</a>
+			</p>
+		</header>
+	</div>
+
+	<script>
+		{
+			const btnAction = document.getElementById('btn-action');
+
+			btnAction.onmouseover = function (e) {
+				this.classList.add('color-blue');
+				this.setAttribute('data-theme', 'dark');
+			};
+			btnAction.onmouseout = function (e) {
+				this.classList.remove('color-blue');
+				this.setAttribute('data-theme', 'light');
+			};
+		};
+	</script>
 </body>
+
 </html>
