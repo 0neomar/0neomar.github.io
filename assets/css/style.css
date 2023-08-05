@@ -1,26 +1,88 @@
 :root {
-    --color-orange: #DF740C;
     --color-yellow: #FFE64D;
     --color-lightblue: #E6FFFF;
     --color-blue: #6FC3DF;
     --color-darkblue: #0C141F;
-    --gradient-main: linear-gradient(150deg, rgba(12,20,31,1) 0%, rgba(12,20,31,1) 50%, rgba(115,67,22,1) 100%);
+    --gradient-main: linear-gradient(150deg,
+        var(--background-color) 0%,
+        var(--background-color) 30%,
+        rgba(115, 67, 22, 1) 100%);
+    /*
+    --gradient-main: linear-gradient(150deg,
+        rgba(12, 20, 31, 1) 0%,
+        rgba(12, 20, 31, 1) 30%,
+        rgba(115, 67, 22, 1) 100%);
+        */
     --primary: #f4511e !important;
 }
 
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
+    --color-orange: #DF740C;
     --code-color: var(--color-darkblue);
 }
 
+[data-theme="dark"],
+:root:not([data-theme="light"]) {
+    --color-orange: #FF962F;
+}
+
+li {
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    list-style-type: disc !important;
+}
+
+li::marker {
+    color: var(--color-blue);
+}
+
+
 .hero {
-    padding: 100px 0;
-    /* background-color: var(--color-darkblue); */
-    /* background: rgb(12,20,31); */
+    min-height: 101vh;
+    padding: 25vh 0;
+/*    background: rgb(12, 20, 31);*/
     background: var(--gradient-main);
 }
 
+h1,h2,h3,h4,h5,h6 {
+    margin-bottom: 30px;
+}
+
+.space-top { margin-top: 20px }
+.space-bottom { margin-top: 20px  }
+
+.text-middle-action {
+    cursor: pointer;
+    text-align: center;
+    font-size: 4em;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
 
 .color-orange { color: var(--color-orange); }
 .color-yellow { color: var(--color-yellow); }
 .color-blue { color: var(--color-blue); }
+
+.bg-orange { background-color: var(--color-orange); }
+.bg-yellow { background-color: var(--color-yellow); }
+.bg-blue { background-color: var(--color-blue); }
+
+.grid-min-padding {
+    padding:
+        calc( var(--block-spacing-vertical) /2)
+        calc( var(--block-spacing-horizontal) /2)
+        !important;
+}
+
+.img-square {
+    width: 300px;
+    height: 300px;
+    background-color: beige;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    padding: 0;
+/*    display: inline-block;*/
+/*    float: left;*/
+}

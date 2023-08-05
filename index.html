@@ -1,3 +1,4 @@
+<!-- Hello there -->
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 
@@ -14,19 +15,90 @@
 		<header class="container">
 			<hgroup>
 				<h1 class="color-blue">Neomar Gabriel Rodriguez</h1>
-				<h3>Backend developer with more than 4 years of experience.</h3>
+				<h3>Backend developer</h3>
+				<!-- <h3>Backend developer with more than 4 years of experience.</h3> -->
 				<h3>I like to code. Also I know JavaScript, PHP, SQL, Python, and some others languages.</h3>
 			</hgroup>
 			<p data-theme="light">
-				<a href="#" role="button_" onclick="event.preventDefault()">
-					<code id="btn-action">1| <span class="color-orange">goto</span> projects;</code>
+				<a href="#projects" role="button_" onclick="event.preventDefault(); scrollToId('projects');">
+					<code style="font-size: 1.2em;" id="btn-action">
+						<span class="color-orange">goto</span> projects;
+					</code>
 				</a>
 			</p>
 		</header>
+		<p class="text-middle-action" onclick="scrollToId('main');">
+			&#x2193;
+		</p>
 	</div>
 
+	<main id="main" class="container">
+		<section id="knowledge" class="grid">
+			<section>
+				<h1>Languages</h1>
+				<ul>
+					<li>JavaScript / TypeScript</li>
+					<li>PHP</li>
+					<li>Python</li>
+					<li>SQL</li>
+					<li>Java</li>
+					<li>Kotlin</li>
+				</ul>
+			</section>
+			<section>
+				<h1>Technologies</h1>
+				<ul>
+					<li>Node.js</li>
+					<li>Vue.js</li>
+					<li>React</li>
+					<li>Laravel</li>
+					<li>Quasar Framework</li>
+					<li>Django</li>
+				</ul>
+			</section>
+		</section>
+
+
+		<section id="projects">
+			<h1>Projects</h1>
+				<article class="grid grid-min-padding">
+					<div class="img-square"></div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					</p>
+				</article>
+		</section>
+
+
+		<section id="experience">
+			<h1>Experience</h1>
+			<section class="grid">
+				<article>A</article>
+				<article>B</article>
+			</section>
+		</section>
+
+
+		<section id="interests">
+			<h1>Activities and Interests</h1>
+			<section class="grid">
+				<article>A</article>
+				<article>B</article>
+			</section>
+		</section>
+	</main>
+
+	<footer class="container">
+		<!-- Made using <a href="https://picocss.com">Pico.css</a> -->
+	</footer>
+
 	<script>
-		{
+		function scrollToId(id) {
+			document
+				.getElementById(id)
+				.scrollIntoView({ behavior: "smooth", inline: "nearest" })
+		}
+
+		(function() {
 			const btnAction = document.getElementById('btn-action');
 
 			btnAction.onmouseover = function (e) {
@@ -37,7 +109,7 @@
 				this.classList.remove('color-blue');
 				this.setAttribute('data-theme', 'light');
 			};
-		};
+		})();
 	</script>
 </body>
 
